@@ -12,7 +12,7 @@ namespace Task3
         {
             var complexKey = key as ComplexKey;
 
-            var alphabet = LettersOperations.GetAlphabet(language);
+            var alphabet = SymbolsOperations.GetAlphabet(language);
 
             var repeatedKey = GetRepeatKey(complexKey.Key, text);
 
@@ -35,7 +35,7 @@ namespace Task3
                     var index = (alphabetLenght + letterIndex + ((complexKey.Encrypting ? 1 : -1) * codeIndex)) % alphabetLenght;
                     var codedLetter = alphabet[index];
 
-                    result.Append(LettersOperations.GetLetterWithProperRegister(letter, codedLetter));
+                    result.Append(SymbolsOperations.GetLetterWithProperRegister(letter, codedLetter));
                 }
             }
 

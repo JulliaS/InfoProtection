@@ -51,7 +51,7 @@ namespace Task2
                     onlyLetters.Append(letter);
                     var letterPosition = GetIndex(customFrequencyTable, char.ToLower(letter));
                     var codedLetter = frequencyTable.ElementAt(letterPosition).Key;
-                    codedLetter = LettersOperations.GetLetterWithProperRegister(letter, codedLetter);
+                    codedLetter = SymbolsOperations.GetLetterWithProperRegister(letter, codedLetter);
 
                     result.Append(codedLetter);
                 }

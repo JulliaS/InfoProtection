@@ -47,10 +47,6 @@ namespace Task3
             {
                 textBox.Text = FileOperations.ReadFromFile(fileDialog.FileName);
             }
-            else
-            {
-                MessageBox.Show("Something went wrong!");
-            }
         }
 
         private void SaveFileViaDialogWindow(RichTextBox textBox)

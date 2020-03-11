@@ -32,8 +32,14 @@ namespace Cryptography
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var task2Form = new Task3.Form1();
-            task2Form.Show();
+            var task3Form = new Task3.Form1();
+            task3Form.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var task4Form = new Task4.Form1();
+            task4Form.Show();
         }
 
         private void NotImplemented(object sender, EventArgs e)

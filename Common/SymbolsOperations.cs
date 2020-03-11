@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Common
 {
-    public class LettersOperations
+    public class SymbolsOperations
     {
         private const string UkAlphabet = "АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ";
         private const string EnAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -30,6 +33,17 @@ namespace Common
                 codedLetter = char.ToLower(codedLetter);
             }
             return codedLetter;
+        }
+
+        public static string BoolListToBitString(List<bool> bitArray)
+        {
+            var sb = new StringBuilder();
+            foreach (var bit in bitArray)
+            {
+                sb.Append(Convert.ToInt32(bit));
+            }
+            
+            return sb.ToString();
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Task1
         public string CodeEncode(string text, object key, Language language)
         {
             int numberKey = Convert.ToInt32(key);
-            var alphabet = LettersOperations.GetAlphabet(language);
+            var alphabet = SymbolsOperations.GetAlphabet(language);
             var lettersQuantity = alphabet.Length;
             var result = new StringBuilder();
 
