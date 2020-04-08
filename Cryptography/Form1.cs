@@ -44,7 +44,8 @@ namespace Cryptography
 
         private void NotImplemented(object sender, EventArgs e)
         {
-            MessageBox.Show("Task is not implemented yet!");   
+            var task5Form = new Task5.Form1();
+            task5Form.Show();   
         }
     }
 }
