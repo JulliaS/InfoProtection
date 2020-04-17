@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,6 +38,22 @@ namespace Common
                 return (variable * variable) % mod;
             }
             
+        }
+
+        public static BigInteger Random(BigInteger min, BigInteger max)
+        {
+            if (min.Equals(max)) return min;
+
+            var random = new Random();
+
+            BigInteger d = (max - min);
+            byte[] bytes = d.ToByteArray();
+
+            random.NextBytes(bytes);
+            bytes[bytes.Length - 1] &= 0x7F;
+
+            BigInteger value = new BigInteger(bytes);
+            return (value % d) + min;
         }
     }
 }

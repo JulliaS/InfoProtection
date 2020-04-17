@@ -42,10 +42,22 @@ namespace Cryptography
             task4Form.Show();
         }
 
-        private void NotImplemented(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
             var task5Form = new Task5.Form1();
-            task5Form.Show();   
+            task5Form.Show();
         }
+      
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var task6Form = new Task6.Form1();
+            task6Form.Show();
+;
+        }
+        private void NotImplemented(object sender, EventArgs e)
+        {
+            MessageBox.Show("Task is not implemented yet!");
+        }
+
     }
 }
